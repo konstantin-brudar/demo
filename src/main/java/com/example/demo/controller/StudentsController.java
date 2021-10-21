@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class StudentsController {
     private final StudentsService studentsService;
 
-    @PostMapping("save")
+    @PostMapping("/save")
     public StudentsDto saveStudents(@RequestBody StudentsDto studentsDto) {
         log.info("Handling save student: " + studentsDto);
         return studentsService.saveStudent(studentsDto);
